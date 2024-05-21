@@ -14,7 +14,7 @@ html {
 .container {
     position: relative;
     margin: 0 auto;
-    width: 100%;
+    width: 100vmax;
     height: 100vh;
     background-size: cover;
     display: flex;
@@ -91,16 +91,20 @@ p {
 
 /* content on page */
 article {
-    margin-top: 20px;
     padding: 30px 20px;
-    position: absolute;
-    width: 100vw
+    position: fixed;
+    top: 0; left: 0;
+    transform: translate(calc(50vw - 50%));
 }
 
 .content {
     background-color: #f9f9f9;
     padding: 30px;
     border-radius: 50px;
-    margin: auto;
     width: 600px;
+    margin-top: 10px;
+}
+
+.icons {
+    margin-top: 370px;
 }
