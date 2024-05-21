@@ -92,18 +92,15 @@ p {
 /* content on page */
 article {
     margin-top: 20px;
-    padding: 20px;
+    padding: 30px 20px;
     position: absolute;
+    width: 100vw
 }
 
 .content {
     background-color: #f9f9f9;
     padding: 30px;
     border-radius: 50px;
-    margin-left: 60%;
-    margin-top: 20%; /* Add space between navbar and content */
+    margin: auto;
     width: 600px;
-    justify-content: center;
-    align-items: center;
-    text-align: left; 
 }
