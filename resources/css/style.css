@@ -23,10 +23,13 @@ html {
     position: relative;
     margin: 0 auto;
     width: 100%;
-    height: 100vh;
     background-size: cover;
     display: flex;
     flex-direction: column; /* Ensure the container allows for vertical stacking */
+    min-height: 100vh; /* Ensure container covers at least the viewport height */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed; /* Ensure background stays fixed on scroll */
 }
 
 .container::before {
@@ -64,16 +67,16 @@ p {
     font-size: 17px;
 }
 
-/* navigation bar */
 .navbar {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #2d362f;
-    position: sticky;
+    position: fixed; /* Change from sticky to fixed */
     top: 0;
     width: 100%; /* Ensure navbar spans full width */
+    z-index: 1000; /* Ensure it stays above other content */
 }
 
 .navbar ul {
@@ -112,7 +115,7 @@ article {
     padding: 30px;
     border-radius: 50px;
     width: 100%;
-    margin-top: 50px;
+    margin-top: 220px;
 }
 
 .icons {
