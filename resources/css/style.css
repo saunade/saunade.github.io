@@ -1,9 +1,17 @@
 /* global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-color: #AABD8C;
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 html {
@@ -14,10 +22,11 @@ html {
 .container {
     position: relative;
     margin: 0 auto;
-    width: 100vmax;
+    width: 100%;
     height: 100vh;
     background-size: cover;
     display: flex;
+    flex-direction: column; /* Ensure the container allows for vertical stacking */
 }
 
 .container::before {
@@ -64,17 +73,19 @@ p {
     background-color: #2d362f;
     position: sticky;
     top: 0;
-    width: 100vw;
+    width: 100%; /* Ensure navbar spans full width */
 }
 
 .navbar ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: flex-end; /* Align list items to the right */
 }
 
 .navbar ul li {
-    float: right;
+    float: none; /* Remove float */
 }
 
 .navbar ul li a {
@@ -91,20 +102,19 @@ p {
 
 /* content on page */
 article {
-    padding: 30px 20px;
-    position: fixed;
-    top: 0; left: 0;
-    transform: translate(calc(50vw - 50%));
+    position: relative; 
+    margin: 0 auto; 
+    max-width: 700px; 
 }
 
 .content {
     background-color: #f9f9f9;
     padding: 30px;
     border-radius: 50px;
-    width: 600px;
-    margin-top: 10px;
+    width: 100%;
+    margin-top: 50px;
 }
 
 .icons {
-    margin-top: 370px;
+    margin-top: 10px;
 }
